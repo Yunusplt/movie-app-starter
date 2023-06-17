@@ -1,18 +1,22 @@
 import React from "react";
-import Register from "./pages/Register";
-import Navbar from "./components/Navbar";
 import AppRouter from "./router/AppRouter";
 import AuthContextProvider from "./context/AuthContext";
+import { ToastContainer } from "react-toastify";
+import MovieContextProvider from "./context/MovieContext";
 
 const App = () => {
   return (
+<div className="dark:bg-[#23242a] min-h-screen">
     <AuthContextProvider>
-      <AppRouter />
+      <MovieContextProvider>
+        <AppRouter />
+        <ToastContainer />
+      </MovieContextProvider>
     </AuthContextProvider>
+</div>
   );
 };
 
 export default App;
-
 
 //todo Burada <AuthContextProvider ile sarmallanan hersey aslinda {children}  dir. yani children olarak AuthContext.js ye gönderilen AppRouter dir...
