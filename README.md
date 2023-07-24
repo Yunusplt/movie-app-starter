@@ -2,7 +2,7 @@
 
 ## How it looks
 
-![Project Snapshot](moviesport.gif)
+![Project Snapshot](movie2.gif)
 ## Description
 
 Project aims to create a Movie App.
